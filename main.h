@@ -2,6 +2,7 @@
 #define _MAIN_H_
 
 #include <stdarg.h>
+#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,11 +11,20 @@
  * @t: type to print
  * @f: function to print
  */
-typedef struct print
+// typedef struct print
+// {
+// 	char *t;
+// 	int (*f)(va_list);
+// } print_t;
+
+struct test
 {
-	char *t;
+	char *sym;
+
 	int (*f)(va_list);
-} print_t;
+};
+typedef struct test test_t;
+
 
 int _putchar(char c);
 int _printf(const char *format, ...);
