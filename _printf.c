@@ -53,7 +53,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(format[i]);
-			len += 1;
+			length += 1;
 		}
 		i++;
 	}
